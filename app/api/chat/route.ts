@@ -93,6 +93,18 @@ function isSystemChannelCompatibilityError(error: unknown) {
   );
 }
 
+// CORS helper
+function withCORS(res: Response) {
+  res.headers.set("Access-Control-Allow-Origin", "*");
+  res.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  return res;
+}
+
+export async function OPTIONS() {
+  return withCORS(new Response(null, { status: 204 }));
+}
+
 export async function POST(req: Request) {
   try {
     const body = (await req.json().catch(() => null)) as {
@@ -180,9 +192,9 @@ export async function POST(req: Request) {
       }
     }
 
-    return result.toUIMessageStreamResponse();
+    return withCORS(result.toUIMessageStreamResponse());
   } catch (error) {
     console.error("Error in /api/chat:", error);
-    return new Response("Internal Server Error", { status: 500 });
+    return withCORS(new Response("Internal Server Error", { status: 500 }));
   }
 }
