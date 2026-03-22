@@ -41,7 +41,7 @@ export default function Home() {
                 Your digital assistant for the hardwood. Built for the <span className="bg-orange-100 px-1 italic">win-condition</span>.
               </p>
               <p className="max-w-md text-stone-500 font-medium leading-relaxed">
-                BB-Bot processes Varun’s custom playbook data to automate drill planning, scouting reports, and real-time team strategy.
+                BB-Bot processes custom playbook data to automate drill planning, scouting reports, and real-time team strategy.Also trained On <b>Varun&apos;s work profile</b> so ask away. 
               </p>
             </div>
 
@@ -87,9 +87,7 @@ export default function Home() {
                 </div>
 
                 {/* --- CHAT UI SCREENSHOT START --- */}
-                {/* Replace "/images/chat-ui-screenshot.png" with the actual path 
-                    to your screenshot asset in the /public directory.
-                */}
+
                 <div className="flex-1 rounded-xl bg-stone-50 border border-stone-100 overflow-hidden relative group">
 
                   <img 
@@ -136,8 +134,8 @@ export default function Home() {
             />
             <FeatureCard 
               icon={<ShieldCheck />}
-              title="Varun's Logic"
-              desc="Trained on specific coaching philosophy and historical team data for contextual accuracy."
+              title="Varun's work profile"
+              desc=" Trained on Varun's work profile, so you can ask BB-Bot about basketball and Varun's dataset."
               highlight
             />
              <FeatureCard 

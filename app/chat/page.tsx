@@ -50,7 +50,7 @@ export default function Chat() {
                         </div>
                         <div>
                             <h1 className="font-black italic uppercase tracking-tighter text-2xl">Locker Room</h1>
-                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-600">Active Session // Varun&apos;s Playbook</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-600">Active Session </p>
                         </div>
                     </div>
                     <div className="hidden sm:flex items-center gap-4">
@@ -87,7 +87,7 @@ export default function Chat() {
                                             <Message key={`${msg.id}-${i}`} from={msg.role} className="group">
                                                 <div className={`flex items-center gap-2 mb-1 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                                     <span className="text-[10px] font-black uppercase tracking-widest text-stone-400">
-                                                        {msg.role === 'user' ? 'Player / Varun' : 'Assistant / BB-Bot'}
+                                                        {msg.role === 'user' ? 'Player' : 'Assistant / BB-Bot'}
                                                     </span>
                                                 </div>
                                                 <MessageContent className={`
