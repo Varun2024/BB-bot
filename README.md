@@ -1,6 +1,124 @@
-# BB-Bot
 
-BB-Bot is a product-style AI assistant focused on basketball knowledge with an explicit note about separate data sources. It provides a chat interface for asking about plays, drills, stats, and — when explicitly requested — information from a separate work-profile dataset for Varun.
+# 🏀 BB-Bot
+
+**BB-Bot** is your AI-powered basketball assistant. Get instant answers about plays, drills, stats, and more—plus optional context from Varun's work profile (kept separate and only used on request). Designed for coaches, players, and fans who want fast, clear, and reliable basketball knowledge.
+
+---
+
+## 🚀 Quickstart
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🏆 Features
+
+- **Basketball-centric chat**: Ask about plays, drills, stats, and get coach-friendly answers
+- **Bento-style product UI**: Modern, responsive homepage with glassmorphism and dark/light mode
+- **Fast, streaming chat**: Real-time answers with clear source labeling
+- **Varun context**: Optionally reference Varun's work profile (kept separate and clearly labeled)
+- **No PDF upload by default**: Upload UI is disabled for simplicity and security
+
+---
+
+## 🖼️ Screenshots
+
+Add screenshots to `docs/screens/` to showcase the product UI and chat experience.
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js 16 (App Router)
+- React 19, TypeScript
+- Tailwind CSS v4, shadcn/ui
+- Vercel AI SDK
+- Neon Postgres (pgvector optional)
+- Drizzle ORM + Drizzle Kit
+
+---
+
+## 🗂️ Project Structure
+
+- `app/page.tsx`: Product homepage (hero + features)
+- `app/chat/page.tsx`: Chat UI and system prompt logic
+- `app/api/chat/route.ts`: Chat API (with CORS)
+- `components/navigation.tsx`: Navbar (with theme toggle)
+- `components/ui/feature-card.tsx`: Reusable feature card
+- `public/logo.svg`: Brand logo
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key
+NEON_DATABASE_URL=postgresql://...
+```
+
+---
+
+## 🏗️ Local Development
+
+1. Install dependencies: `npm install`
+2. (Optional) Push schema: `npx drizzle-kit push`
+3. Start dev server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🚢 Deployment
+
+Deploy to [Vercel](https://vercel.com/):
+
+1. Import your repo in Vercel (UI)
+2. Set environment variables in Project Settings
+3. Click Deploy
+
+---
+
+## 📦 Scripts
+
+- `npm run dev` — Start dev server
+- `npm run build` — Production build
+- `npm run start` — Run production server
+- `npm run lint` — Lint code
+
+---
+
+## 🔍 API
+
+- `POST /api/chat` — Main chat endpoint (CORS enabled)
+
+---
+
+## 📝 Notes
+
+- PDF upload is disabled in the UI (can be re-enabled if needed)
+- System prompt keeps basketball and Varun datasets separate
+- Theme toggle and glassmorphism for modern UX
+
+---
+
+## 🛣️ Roadmap
+
+- Source citations in chat output
+- Query caching for repeated prompts
+- Ingestion status/progress UI
+- Optional conversation history
+
+---
+
+## ⚖️ License
+
+This project is currently unlicensed. Add a LICENSE file to define usage terms.
 
 ## Quickstart
 
