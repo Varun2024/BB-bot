@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BB-Bot logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFB347"/>
+      <stop offset="1" stop-color="#FF7A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="20" fill="url(#g)" />
+  <!-- basketball seams -->
+  <path d="M20 60c0 22.091 17.909 40 40 40s40-17.909 40-40S82.091 20 60 20 20 37.909 20 60z" stroke="#8A4B00" stroke-width="3" fill="none"/>
+  <path d="M60 20v80" stroke="#8A4B00" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 40c20 10 40 10 60 0" stroke="#8A4B00" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 80c20-10 40-10 60 0" stroke="#8A4B00" stroke-width="3" stroke-linecap="round"/>
+  <!-- BB letters -->
+  <text x="50%" y="62%" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="28" fill="#2B2B2B">BB</text>
+</svg>
