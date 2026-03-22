@@ -87,9 +87,6 @@ OPENROUTER_API_KEY=your_openrouter_api_key
 # Database (optional)
 NEON_DATABASE_URL=postgresql://...
 
-# Clerk (optional, for auth UI)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
-CLERK_SECRET_KEY=sk_...
 ```
 
 3. (Optional) If you use Neon/Postgres with pgvector and Drizzle, push the schema:

@@ -1,13 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-    SignInButton,
-    SignOutButton,
-    SignUpButton,
-    UserButton,
-    Show,
-} from "@clerk/nextjs"
 import Link from "next/link"
 import { MessageSquare } from "lucide-react"
 
@@ -37,20 +30,7 @@ export const Navigation = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <Show when="signed-in">
-                        <UserButton />
-                        <SignOutButton>
-                            <Button variant="outline" className="border-black/20 bg-white text-black hover:bg-stone-100">Sign out</Button>
-                        </SignOutButton>
-                    </Show>
-                    <Show when="signed-out">
-                        <SignInButton mode="modal">
-                            <Button variant="outline" className="border-black/20 bg-white text-black hover:bg-stone-100">Sign in</Button>
-                        </SignInButton>
-                        <SignUpButton mode="modal">
-                            <Button className="bg-black text-white hover:bg-stone-800">Sign up</Button>
-                        </SignUpButton>
-                    </Show>
+                    {/* Auth removed */}
                 </div>
             </div>
         </nav>
